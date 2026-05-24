@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Delish — fine dining, warm hospitality, and unforgettable flavors since 1998." />
+  <title>Delish | Luxury Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="container top-bar__inner">
+      <p class="top-bar__hours">
+        <span>Mon–Wed: 11am–9pm</span>
+        <span class="dot" aria-hidden="true">•</span>
+        <span>Thu–Sat: 11am–10pm</span>
+      </p>
+      <ul class="top-bar__contact">
+        <li><a href="mailto:reservations@delish.com">reservations@delish.com</a></li>
+        <li><a href="tel:+1234567899">0781 541 2654</a></li>
+        <li>Iraq Baghdad Al-Jadida</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <a href="#" class="logo" aria-label="Delish home">
+        <img src="images/logo.svg" alt="" width="36" height="40" />
+        <span>Delish</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#reservation" class="btn btn--outline btn--sm">Book a Table</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="home" aria-label="Welcome">
+      <div class="hero__slides">
+        <article class="hero__slide is-active" data-slide="0">
+          <div class="hero__bg">
+            <img src="images/hero-1.jpg" alt="" width="1920" height="1080" fetchpriority="high" />
+          </div>
+          <div class="hero__overlay"></div>
+          <div class="container hero__content">
+            <p class="hero__eyebrow">The Great</p>
+            <h1 class="hero__title">Flavored Food<br /><span>Part of Us</span></h1>
+            <div class="hero__actions">
+              <a href="#reservation" class="btn btn--ghost">Book a Table</a>
+              <a href="#menu" class="btn btn--text">View Menu</a>
+            </div>
+          </div>
+        </article>
+        <article class="hero__slide" data-slide="1">
+          <div class="hero__bg">
+            <img src="images/hero-2.jpg" alt="" width="1920" height="1080" />
+          </div>
+          <div class="hero__overlay"></div>
+          <div class="container hero__content">
+            <p class="hero__eyebrow">We serve food, harmony &amp; laughter</p>
+            <h1 class="hero__title">Delicious Foods<br /><span>With Wonderful Eating</span></h1>
+            <div class="hero__actions">
+              <a href="#menu" class="btn btn--primary">View Food Menu</a>
+            </div>
+          </div>
+        </article>
+        <article class="hero__slide" data-slide="2">
+          <div class="hero__bg">
+            <img src="images/hero-3.jpg" alt="" width="1920" height="1080" />
+          </div>
+          <div class="hero__overlay"></div>
+          <div class="container hero__content">
+            <p class="hero__eyebrow">Since 2021</p>
+            <h1 class="hero__title">Crafted Plates<br /><span>Memorable Evenings</span></h1>
+            <div class="hero__actions">
+              <a href="#reservation" class="btn btn--ghost">Reserve Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="hero__side-text hero__side-text--left" aria-hidden="true">Opening Hours: 18:00 – 02:00</p>
+      <p class="hero__side-text hero__side-text--right" aria-hidden="true">Opening Hours: 18:00 – 02:00</p>
+      <div class="hero__dots" role="tablist" aria-label="Hero slides">
+        <button type="button" class="is-active" aria-selected="true" aria-label="Slide 1"></button>
+        <button type="button" aria-selected="false" aria-label="Slide 2"></button>
+        <button type="button" aria-selected="false" aria-label="Slide 3"></button>
+      </div>
+    </section>
+
+    <!-- Booking strip -->
+    <section class="booking-strip" id="reservation" aria-labelledby="booking-title">
+      <div class="container">
+        <h2 id="booking-title" class="booking-strip__title">Book a Table</h2>
+        <form class="booking-form" id="booking-form" novalidate>
+          <label class="field">
+            <span class="field__label">Number of guests</span>
+            <select name="guests" required>
+              <option value="">Select guests</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5+ Guests</option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="field__label">Date</span>
+            <input type="date" name="date" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Time</span>
+            <select name="time" required>
+              <option value="">Select time</option>
+              <option value="18:00">6:00 PM</option>
+              <option value="19:00">7:00 PM</option>
+              <option value="20:00">8:00 PM</option>
+              <option value="21:00">9:00 PM</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn--primary btn--lg">Book Reservation</button>
+        </form>
+        <p class="form-message" id="booking-message" hidden role="status"></p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__media">
+          <img src="images/about.jpg" alt="Elegant plated dish at Delish restaurant" width="600" height="600" loading="lazy" />
+        </div>
+        <div class="about__content">
+          <span class="badge">Make Reservation</span>
+          <h2 id="about-title" class="section-title">Welcome to Our Luxury Restaurant</h2>
+          <p class="lead">The scallops were perfectly cooked, tender, and flavorful, paired beautifully with a creamy risotto and seasonal vegetables. The presentation was artful, showcasing the chef's attention to detail.</p>
+          <div class="hotline">
+            <div class="hotline__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            </div>
+            <div>
+              <p class="hotline__label">Hotline 24/7</p>
+              <a href="tel:+25632542568" class="hotline__number">+964 781 541 2654</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services section--cream" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="badge">Our Services</span>
+          <h2 id="services-title" class="section-title section-title--center">Our Restaurant Service</h2>
+          <div class="ornament" aria-hidden="true"></div>
+        </div>
+        <div class="cards cards--3">
+          <article class="card">
+            <img src="images/service-wedding.jpg" alt="Wedding reception dining setup" width="400" height="260" loading="lazy" />
+            <h3>Wedding Service</h3>
+            <p>From intimate ceremonies to grand celebrations, we craft menus that match your story and delight every guest.</p>
+            <a href="#contact" class="card__link">Read More <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card">
+            <img src="images/service-buffet.jpg" alt="Buffet spread with fresh dishes" width="400" height="260" loading="lazy" />
+            <h3>Buffet Service</h3>
+            <p>Generous spreads of seasonal favorites, prepared fresh and presented with the care your occasion deserves.</p>
+            <a href="#contact" class="card__link">Read More <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card">
+            <img src="images/service-party.jpg" alt="Festive party table setting" width="400" height="260" loading="lazy" />
+            <h3>Party Service</h3>
+            <p>Whether a milestone birthday or corporate gathering, our team handles every detail so you can enjoy the moment.</p>
+            <a href="#contact" class="card__link">Read More <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="menu__header">
+          <div>
+            <span class="badge">Food Menu</span>
+            <h2 id="menu-title" class="section-title">Our Delicious Foods</h2>
+          </div>
+          <div class="menu-filters" role="tablist" aria-label="Filter menu">
+            <button type="button" class="menu-filters__btn is-active" data-filter="all">All Food</button>
+            <button type="button" class="menu-filters__btn" data-filter="breakfast">Breakfast</button>
+            <button type="button" class="menu-filters__btn" data-filter="lunch">Lunch</button>
+            <button type="button" class="menu-filters__btn" data-filter="dinner">Dinner</button>
+          </div>
+        </div>
+
+        <div class="menu__layout">
+          <div class="menu-list" id="menu-list">
+            <!-- populated by JS -->
+          </div>
+          <div class="menu-grid" id="menu-grid">
+            <!-- populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" aria-label="Restaurant highlights">
+      <div class="container stats__grid">
+        <div><strong>15</strong><span>New Signature Dishes</span></div>
+        <div><strong>7</strong><span>Awards Won</span></div>
+        <div><strong>12</strong><span>Unique Specialities</span></div>
+        <div><strong>35</strong><span>Team Members</span></div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="gallery__head container">
+        <div>
+          <span class="badge badge--light">View Our Gallery</span>
+          <h2 id="gallery-title" class="section-title section-title--light">Our Food Gallery</h2>
+        </div>
+        <div class="gallery__nav">
+          <button type="button" class="gallery__arrow" id="gallery-prev" aria-label="Previous">‹</button>
+          <button type="button" class="gallery__arrow" id="gallery-next" aria-label="Next">›</button>
+        </div>
+      </div>
+      <div class="gallery__track" id="gallery-track">
+        <figure><img src="images/gallery-1.jpg" alt="Fresh salad bowl" loading="lazy" /></figure>
+        <figure><img src="images/gallery-2.jpg" alt="Wood-fired pizza" loading="lazy" /></figure>
+        <figure><img src="images/gallery-3.jpg" alt="Stack of pancakes" loading="lazy" /></figure>
+        <figure><img src="images/gallery-4.jpg" alt="Gourmet breakfast plate" loading="lazy" /></figure>
+        <figure><img src="images/gallery-5.jpg" alt="Pasta dish" loading="lazy" /></figure>
+        <figure><img src="images/gallery-6.jpg" alt="Avocado toast" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="badge">Client Testimonial</span>
+          <h2 id="testimonials-title" class="section-title section-title--center">Our Customer Feedbacks</h2>
+          <div class="ornament" aria-hidden="true"></div>
+        </div>
+        <div class="testimonials__grid">
+          <blockquote class="testimonial">
+            <p>The scallops were perfectly cooked, tender, and flavorful, paired beautifully with a creamy risotto and seasonal vegetables. The presentation was artful, showcasing the chef's attention to detail.</p>
+            <footer>
+              <div class="testimonial__avatar" aria-hidden="true">KT</div>
+              <div>
+                <cite>Kuman Tunman</cite>
+                <span>Regular Guest</span>
+              </div>
+            </footer>
+            <span class="testimonial__quote" aria-hidden="true">"</span>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>The only minor downside was the noise level, which made conversation a bit challenging at times. However, the food and service more than made up for it. Delish excels in delivering delicious food.</p>
+            <footer>
+              <div class="testimonial__avatar" aria-hidden="true">AM</div>
+              <div>
+                <cite>Amanda Martin</cite>
+                <span>Food Reviewer</span>
+              </div>
+            </footer>
+            <span class="testimonial__quote" aria-hidden="true">"</span>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section categories section--cream" aria-labelledby="categories-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="badge">Make Reservation</span>
+          <h2 id="categories-title" class="section-title section-title--center">Discover Our Category</h2>
+          <div class="ornament" aria-hidden="true"></div>
+        </div>
+        <div class="categories__grid">
+          <article>
+            <img src="images/cat-drinks.jpg" alt="Tea and drinks" loading="lazy" />
+            <h3>Tea &amp; Drinks</h3>
+          </article>
+          <article>
+            <img src="images/cat-lunch.jpg" alt="Lunch meal" loading="lazy" />
+            <h3>Lunch Meal</h3>
+          </article>
+          <article>
+            <img src="images/cat-dinner.jpg" alt="Dinner meal" loading="lazy" />
+            <h3>Dinner Meal</h3>
+          </article>
+          <article>
+            <img src="images/cat-dessert.jpg" alt="Desserts" loading="lazy" />
+            <h3>Desserts Menu</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours -->
+    <section class="hours" aria-labelledby="hours-title">
+      <div class="container hours__card">
+        <span class="badge">Make Reservation</span>
+        <h2 id="hours-title" class="section-title section-title--center">Opening Time</h2>
+        <div class="ornament" aria-hidden="true"></div>
+        <div class="hours__grid">
+          <div>
+            <h3>Monday to Friday</h3>
+            <p><time>10:00</time> – <time>20:00</time></p>
+          </div>
+          <div>
+            <h3>Friday to Sunday</h3>
+            <p><time>12:00</time> – <time>22:00</time></p>
+          </div>
+        </div>
+        <a href="tel:+2561489362" class="hours__phone">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          +964 781 541 2654
+        </a>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="section blog" id="blog" aria-labelledby="blog-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="badge">Crispy, Every Bite Taste</span>
+          <h2 id="blog-title" class="section-title section-title--center">Latest News Insights</h2>
+        </div>
+        <div class="blog__grid">
+          <article class="blog-card">
+            <div class="blog-card__img">
+              <img src="images/blog-1.jpg" alt="Chef preparing a gourmet dish" loading="lazy" />
+              <span class="blog-card__date">20 Feb</span>
+            </div>
+            <span class="blog-card__tag">Food Menu</span>
+            <h3>How Restaurants Foster Connections and Create Memories</h3>
+            <p class="blog-card__meta">2 Comments</p>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card__img">
+              <img src="images/blog-2.jpg" alt="Breakfast spread on a wooden table" loading="lazy" />
+              <span class="blog-card__date">09 Dec</span>
+            </div>
+            <span class="blog-card__tag">Foodies</span>
+            <h3>Discovering Affordable Gourmet Experiences in Your City</h3>
+            <p class="blog-card__meta">2 Comments</p>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card__img">
+              <img src="images/blog-3.jpg" alt="Fresh ingredients in a kitchen" loading="lazy" />
+              <span class="blog-card__date">24 Feb</span>
+            </div>
+            <span class="blog-card__tag">Foodies</span>
+            <h3>Iconic Establishments Are Reinventing Fine Dining</h3>
+            <p class="blog-card__meta">2 Comments</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="cta__bg"></div>
+      <div class="container cta__inner">
+        <div>
+          <p class="cta__eyebrow">Book a table for you and family members</p>
+          <h2 id="cta-title">Need a Table at Delish?</h2>
+        </div>
+        <a href="#reservation" class="btn btn--ghost btn--lg">Book a Table</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div>
+          <span class="badge">Contact Us</span>
+          <h2 id="contact-title" class="section-title">Get in Touch</h2>
+          <p class="lead">Questions about private dining, catering, or reservations? We would love to hear from you.</p>
+          <ul class="contact__list">
+            <li><strong>Address</strong> Iraq Baghdad Al-Jadida</li>
+            <li><strong>Email</strong> <a href="mailto:info@delish.com">info@delish.com</a></li>
+            <li><strong>Phone</strong> <a href="tel:+1234567899">0781 541 2654</a></li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <label class="field">
+            <span class="field__label">Your name</span>
+            <input type="text" name="name" required autocomplete="name" />
+          </label>
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+          <label class="field field--full">
+            <span class="field__label">Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+          <p class="form-message" id="contact-message" hidden role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <a href="#" class="logo logo--light">
+          <img src="images/logo.svg" alt="" width="36" height="40" />
+          <span>Delish</span>
+        </a>
+        <p>Iraq Baghdad Al-Jadida</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">in</a>
+          <a href="#" aria-label="Twitter">t</a>
+          <a href="#" aria-label="LinkedIn">li</a>
+        </div>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Our Menu</a></li>
+          <li><a href="#blog">Latest News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <ul>
+          <li><a href="#reservation">Reservations</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Newsletter</h3>
+        <p>Subscribe and receive our offers and updates in your inbox.</p>
+        <form class="newsletter" id="newsletter-form">
+          <input type="email" name="email" placeholder="Email address" required autocomplete="email" />
+          <button type="submit" aria-label="Subscribe">➤</button>
+        </form>
+      </div>
+    </div>
+    <div class="container site-footer__bottom">
+      <p>© 2024 Delish Restaurant. All rights reserved.</p>
+      <p><a href="#">Terms of Use</a> · <a href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

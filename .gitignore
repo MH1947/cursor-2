@@ -1,0 +1,18 @@
+# Source PDF and extraction artifacts (large)
+pic 2.pdf
+/images/
+/assets/
+website/images/preview-*.png
+website/images/page-*.png
+website/images/section-*.png
+
+# Editor & OS
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python temp
+tmp/
+__pycache__/
+*.pyc
